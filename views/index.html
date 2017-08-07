@@ -31,7 +31,7 @@
         </body>
     </html>
 -->
-//openweather api
+<!--openweather api-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +43,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
-    <script src="final.js"></script>
+    <script src="/javascripts/app.js"></script>
     </head>
     <body ng-app='myApp' ng-controller='myCtrl'>
         <div>
@@ -72,16 +72,16 @@
                 </tr>
                 <tr>
                 <td>{{cityForecast.list[0].temp.day}}&#8451;
-                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[0].weather[0].icon}}.png'>
+                    <img src='https://openweathermap.org/img/w/{{cityForecast.list[0].weather[0].icon}}.png'>
                     </td>
                     <td>{{cityForecast.list[1].temp.day}}&#8451;
-                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[1].weather[0].icon}}.png'>
+                    <img src='https://openweathermap.org/img/w/{{cityForecast.list[1].weather[0].icon}}.png'>
                     </td>
                     <td>{{cityForecast.list[2].temp.day}}&#8451;
-                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[2].weather[0].icon}}.png'>
+                    <img src='https://openweathermap.org/img/w/{{cityForecast.list[2].weather[0].icon}}.png'>
                     </td>
                     <td>{{cityForecast.list[3].temp.day}}&#8451;
-                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[3].weather[0].icon}}.png'>
+                    <img src='https://openweathermap.org/img/w/{{cityForecast.list[3].weather[0].icon}}.png'>
                     </td>
                 </tr>
             </tbody>
