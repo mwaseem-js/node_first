@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
     <html>
     <head>
@@ -27,10 +28,65 @@
                 </tr>
             </tbody>
         </table>
-<!--
-        <ul ng-repeat="item in data">
-	<li>Name: {{item.name}}, City: {{item.city}}</li>
-</ul>
--->
         </body>
     </html>
+-->
+//openweather api
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather-Forcast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="final.js"></script>
+    </head>
+    <body ng-app='myApp' ng-controller='myCtrl'>
+        <div>
+        <i class="fa fa-circle" aria-hidden="false" style='color:greenyellow;'></i>
+            <label>From:</label>
+            <select  ng-options='option as option.name for option in cityList' ng-model='selectedCity' ng-change='cityChanged(selectedCity.name)'></select>
+        </div>
+
+        <hr>
+        <div id='tabdiv' style="border: 2px solid greenyellow; border-radius:5px;width:500px" ng-if='display'>
+        <table>
+            <thead>
+            <tr>
+                <td>Current Weather:</td>
+                <td>Next 3 Days:</td>
+                <td style="color:white;">hjhghgghf</td>
+                <td></td>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td>{{cityForecast.list[1].dt*1000 | date :  "dd/MM"}}</td>
+                                <td>{{cityForecast.list[2].dt*1000 | date :  "dd/MM"}}</td>
+                                <td>{{cityForecast.list[3].dt*1000 | date :  "dd/MM"}}</td>
+                </tr>
+                <tr>
+                <td>{{cityForecast.list[0].temp.day}}&#8451;
+                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[0].weather[0].icon}}.png'>
+                    </td>
+                    <td>{{cityForecast.list[1].temp.day}}&#8451;
+                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[1].weather[0].icon}}.png'>
+                    </td>
+                    <td>{{cityForecast.list[2].temp.day}}&#8451;
+                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[2].weather[0].icon}}.png'>
+                    </td>
+                    <td>{{cityForecast.list[3].temp.day}}&#8451;
+                    <img src='http://openweathermap.org/img/w/{{cityForecast.list[3].weather[0].icon}}.png'>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>
